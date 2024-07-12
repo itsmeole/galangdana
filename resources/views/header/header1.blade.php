@@ -43,7 +43,7 @@
                             </div>
                             <!-- Header-btn -->
                             <div class="header-btn d-none f-right d-lg-block">
-                                <a href="#" class="btn head-btn1">Daftar</a>
+                                <a href="daftar" : active="request()->routeIs('bfr.daftar')" class="btn head-btn1">Daftar</a>
                                 <a href="login" : active="request()->routeIs('bfr.login')" class="btn head-btn2">Masuk</a>
                             </div>
                         </div>
