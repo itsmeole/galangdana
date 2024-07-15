@@ -1,4 +1,4 @@
-@extends('bfr.index2')
+@extends('bfr.index')
 @push('css')
 
 @endpush
@@ -41,7 +41,7 @@
                                     </div> --}}
                                     <div class="job-tittle job-tittle2">
                                         <a href="#">
-                                            <h4>{{$data->posisi }}</h4>
+                                            <h4>{{$data->nama_perusahaan }}</h4>
                                         </a>
                                         <ul>
                                             <li>{{ $data->posisi }}</li>
@@ -63,7 +63,7 @@
             </div>
         </div>
         <!-- Job List Area End -->
-     
+
         <!--Pagination End  -->
 
     </main>

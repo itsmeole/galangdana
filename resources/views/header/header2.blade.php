@@ -18,7 +18,7 @@
                     <div class="col-lg-3 col-md-2">
                         <!-- Logo -->
                          <div class="logo" style="display:flex; align-items: center;">
-                            <a href="index.html"><img style="width: 3rem; margin:0 0.5rem 0.2rem 0;" src="{{ asset('storage') }}/assets/img/logo/disnaker.png" alt=""></a>
+                            <a href="#"><img style="width: 3rem; margin:0 0.5rem 0.2rem 0;" src="{{ asset('storage') }}/assets/img/logo/disnaker.png" alt=""></a>
                             <h2><strong>Disnaker</strong></h2>
                         </div>
                     </div>

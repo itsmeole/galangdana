@@ -25,6 +25,8 @@ return new class extends Migration
             $table->text('tanggung_jawab');
             $table->text('kualifikasi');
             $table->integer('dibutuhkan');
+            $table->string('email');
+            $table->string('web');
             $table->timestamps();
         });
     }

@@ -24,5 +24,7 @@ class Lowongan extends Model
         'tanggung_jawab',
         'kualifikasi',
         'dibutuhkan',
+        'email',
+        'web'
     ];
 }

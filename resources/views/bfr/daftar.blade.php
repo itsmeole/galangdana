@@ -22,7 +22,7 @@
 				<input type="password" placeholder="password" required>
 			</div>
 
-			<button type="submit" class="btn"><a href="list" : active="request()->routeIs('aftr.list_job')">Buat Akun</button>
+			<button type="submit" class="btn"><a href="login" : active="request()->routeIs('bfr.login')">Buat Akun</button>
 		</form>
 	</div>
 </body>

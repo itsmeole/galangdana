@@ -24,10 +24,10 @@
 				<a href="#">Lupa password</a>
 			</div>
 
-			<button type="submit" class="btn"><a href="list" : active="request()->routeIs('aftr.list_job')">Login</button>
+			<button type="submit" class="btn"><a href="dashboard" : active="request()->routeIs('aftr.list_job')">Login</button>
 
 			<div class="register-link">
-				<p>Belum punya akun? <a href="#">Daftar</a></p>
+				<p>Belum punya akun? <a href="daftar" : active="request()->routeIs('bfr.daftar')">Daftar</a></p>
 			</div>
 		</form>
 	</div>

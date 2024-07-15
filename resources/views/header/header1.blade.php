@@ -29,7 +29,7 @@
                                 <nav class="d-none d-lg-block">
                                     <ul id="navigation">
                                         <li><a href="/" : active="request()->routeIs('laman.utama')">Dashboard</a></li>
-                                        <li><a href="login" : active="request()->routeIs('laman.login')">Cari lowongan kerja</a></li>
+                                        <li><a href="dashboard" : active="request()->routeIs('aftr.list_job')">Cari lowongan kerja</a></li>
                                         <li><a href="tentang" : active="request()->routeIs('laman.tentang')">Tentang</a></li>
                                         <li><a href="#">Hubungi</a>
                                             <ul class="submenu">
@@ -43,8 +43,35 @@
                             </div>
                             <!-- Header-btn -->
                             <div class="header-btn d-none f-right d-lg-block">
-                                <a href="daftar" : active="request()->routeIs('bfr.daftar')" class="btn head-btn1">Daftar</a>
-                                <a href="login" : active="request()->routeIs('bfr.login')" class="btn head-btn2">Masuk</a>
+                                @if (Route::has('login'))
+                                    @auth
+                                        <a
+                                            href="{{ url('/lowongan/create') }}"
+                                            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
+                                        >
+                                            Dashboard
+                                        </a>
+                                    @else
+                                        <a
+                                            href="{{ route('login') }}"
+                                            class="btn head-btn1"
+                                        >
+                                            Log in
+                                        </a>
+
+                                        @if (Route::has('register'))
+                                            <a
+                                                href="{{ route('register') }}"
+                                                class="btn head-btn2"
+                                            >
+                                                Register
+                                            </a>
+                                        @endif
+                                    @endauth
+
+                            @endif
+                                {{-- <a href="daftar" : active="request()->routeIs('bfr.daftar')" class="btn head-btn1">Daftar</a>
+                                <a href="login" : active="request()->routeIs('bfr.login')" class="btn head-btn2">Masuk</a> --}}
                             </div>
                         </div>
                     </div>
