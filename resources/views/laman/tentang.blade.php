@@ -191,7 +191,7 @@
                     <div class="cv-caption text-center">
                         {{-- <p class="pera1">FEATURED TOURS Packages</p> --}}
                         <p class="pera2">Buatlah Perbedaan dengan Resume Online Anda!</p>
-                        <a href="login" : active="request()->routeIs('bfr.login')" class="border-btn2 border-btn4">Unggah CV Anda</a>
+                        {{-- <a href="login" : active="request()->routeIs('bfr.login')" class="border-btn2 border-btn4">Unggah CV Anda</a> --}}
                     </div>
                 </div>
             </div>

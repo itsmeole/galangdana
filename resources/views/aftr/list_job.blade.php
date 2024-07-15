@@ -40,18 +40,20 @@
                                         <a href="#"><img src="{{ asset('storage') }}/assets/img/icon/job-list1.png" alt=""></a>
                                     </div> --}}
                                     <div class="job-tittle job-tittle2">
-                                        <a href="#">
+                                        <a href="mailto:{{ $data->email  }}">
                                             <h4>{{$data->nama_perusahaan }}</h4>
                                         </a>
                                         <ul>
                                             <li>{{ $data->posisi }}</li>
                                             <li><i class="fas fa-map-marker-alt"></i>{{$data->lokasi }}</li>
                                             <li>Rp.{{$data->gaji }}</li>
+                                            <li>{{ $data->dibuka }}</li>
+                                            <li>{{ $data->ditutup }}</li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="items-link items-link2 f-right">
-                                    <a href="job_details.html">{{$data->waktu_kerja }}</a>
+                                    <a href="#">{{$data->waktu_kerja }}</a>
                                 </div>
                             </div>
                                @endforeach

@@ -47,10 +47,16 @@
                                     @auth
                                         <a
                                             href="{{ url('/lowongan/create') }}"
-                                            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
+                                            class="btn head-btn1"
                                         >
-                                            Dashboard
+                                            Posting
                                         </a>
+                                        <a href="" class="btn head-btn2" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
+                                        <form id="logout-form" method="POST" action="{{ route('logout') }}" style="display: none">
+                                            @csrf
+                                        </form>
                                     @else
                                         <a
                                             href="{{ route('login') }}"
@@ -66,6 +72,7 @@
                                             >
                                                 Register
                                             </a>
+
                                         @endif
                                     @endauth
 

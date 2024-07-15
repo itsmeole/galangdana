@@ -84,8 +84,8 @@
                 <label  for="web">web</label>
                 <input type="text" name= "web" placeholder="">
             </div>
-            <a href="done" : active="request()->routeIs('lowongan.after')"><button type="submit">Posting Lowongan</button></a>
-            <a href="/" : active="request()->routeIs('laman.utama')"><button type="Button">Batal</button></a>
+            <button type="submit">Posting Lowongan</a></button>
+            <button type="Button"><a href="/" : active="request()->routeIs('laman.utama')">Batal</a></button>
         </form>
     </main>
 </body>

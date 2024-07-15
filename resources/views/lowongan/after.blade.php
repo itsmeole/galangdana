@@ -17,7 +17,16 @@
                 <label for="">Data Lowongan Berhasil Diposting</label>
                 <!-- TODO: Create a "lastname" input with type "text" -->
             </div>
-            <a href="/" : active="request()->routeIs('laman.utama')"><button type="Button">Kembali Ke home</button></a>
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+
+                <x-responsive-nav-link :href="route('logout')"
+                        onclick="event.preventDefault();
+                                    this.closest('form').submit();">
+                    {{ __('Log Out') }}
+                </x-responsive-nav-link>
+            </form>
+            {{-- <a href="/" : active="request()->routeIs('laman.utama')"><button type="Button">Kembali Ke home</button></a> --}}
         </form>
     </main>
 </body>

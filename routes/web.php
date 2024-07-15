@@ -3,6 +3,8 @@ use App\Http\Controllers\ProfileController;
 use App\Models\Lowongan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LowonganController;
+
 Route::get('/', function () {
     return view('laman.utama');
 });
@@ -35,9 +37,15 @@ Route::get('/lowongan/create', function () {
     return view('lowongan.create');
 });
 
+Route::get('/done', function () {
+    return view('lowongan.after');
+});
+
 Route::post('/lowongan/create', function (Request $request) {
     Lowongan::create($request->all());
 })->name('lowongan.create');
+
+Route::get('/lowongan', [LowonganController::class, 'index']);
 
 // Route::get('/', function () {
 //     return view('welcome');

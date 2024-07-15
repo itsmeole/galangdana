@@ -168,7 +168,7 @@
                     <div class="cv-caption text-center">
                         {{-- <p class="pera1">FEATURED TOURS Packages</p> --}}
                         <p class="pera2">Buatlah Perbedaan dengan Resume Online Anda!</p>
-                        <a href="login" : active="request()->routeIs('bfr.login')" class="border-btn2 border-btn4">Unggah CV Anda</a>
+                        {{-- <a href="login" : active="request()->routeIs('bfr.login')" class="border-btn2 border-btn4">Unggah CV Anda</a> --}}
                     </div>
                 </div>
             </div>
@@ -182,15 +182,21 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-tittle text-center">
-                        <span>PEKERJAAN TERKINI</span>
-                        <h2>Lowongan Kerja Unggulan</h2>
+                        @auth
+                            <li style="size: 2rem">
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+                                    <button class="btn head-btn2" type="submit">Logout</button>
+                                </form>
+                            </li>
+                        @endauth
                     </div>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-xl-10">
                     <!-- single-job-content -->
-                    <div class="single-job-items mb-30">
+                    {{-- <div class="single-job-items mb-30">
                         <div class="job-items">
                             <div class="company-img">
                                 <a href="job" active="request()->routeIs('laman.detail1')"><img src="{{ asset('storage') }}/assets/img/icon/job-list1.png" alt=""></a>
@@ -264,7 +270,7 @@
                         <div class="items-link f-right">
                             <a href="job" : active="request()->routeIs('bfr.login')">Full Time</a>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
@@ -416,7 +422,6 @@
                         <div class="support-caption">
                             <p class="pera-top">Dengan ribuan lowongan pekerjaan dari perusahaan terkemuka, fitur pencarian canggih, dan kemudahan melamar, kami membantu Anda meraih sukses profesional. Mulailah perjalanan karier Anda bersama Disnaker sekarang!</p>
                             <p>Temukan karier impian Anda dengan Disnaker! Dengan akses ke ribuan lowongan pekerjaan dari perusahaan terkemuka di berbagai industri. Kami memastikan Anda mendapatkan peluang terbaik yang sesuai dengan keahlian dan minat Anda. Dapatkan kemudahan dalam melamar pekerjaan, update terkini mengenai lowongan terbaru, dan saran karier yang berguna untuk membantu Anda mencapai sukses profesional.</p>
-                            <a href="login"active="request()->routeIs('bfr.login')" class="btn post-btn">Posting Lowongan</a>
                         </div>
                     </div>
                 </div>
