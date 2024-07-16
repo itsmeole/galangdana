@@ -13,8 +13,8 @@
     </nav>
     <main>
         <h2>Data Lowongan</h2>
-        <form action="{{ route('lowongan.create') }}" method="post">
-            @csrf <!-- TODO: Set Action and Method Properties -->
+        <form id="lowonganForm" action="{{ route('lowongan.create') }}" method="post">
+            @csrf
             <div style="margin-bottom: 1rem">
                 <label for="nama">nama perusahaan</label>
                 <input type="text" name="nama_perusahaan" placeholder="" required>
@@ -81,12 +81,38 @@
             </div>
 
             <div style="margin-bottom: 1rem">
-                <label  for="web">web</label>
-                <input type="text" name= "web" placeholder="">
+                <label for="web">web</label>
+                <input type="text" name="web" placeholder="">
             </div>
-            <button type="submit">Posting Lowongan</a></button>
-            <button type="Button"><a href="/" : active="request()->routeIs('laman.utama')">Batal</a></button>
+            <button type="submit">Posting Lowongan</button>
+            <button type="button"><a href="/" :class="{ 'active': request()->routeIs('laman.utama') }">Batal</a></button>
         </form>
     </main>
+
+    <script>
+        document.getElementById('lowonganForm').onsubmit = function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            var form = event.target;
+            var formData = new FormData(form);
+
+            fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: {
+                    'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value
+                }
+            }).then(response => {
+                if (response.ok) {
+                    window.location.href = '/';
+                } else {
+                    // Handle error response
+                    alert('Error submitting form');
+                }
+            }).catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
 </body>
 </html>

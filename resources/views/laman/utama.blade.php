@@ -36,7 +36,7 @@
                                     </div>
                                 </div>
                                 <div class="search-form">
-                                    <a href="login" : active="request()->routeIs('bfr.login')">Cari Lowongan</a>
+                                    <a href="dashboard" : active="request()->routeIs('aftr.list_job')">Cari Lowongan</a>
                                 </div>
                             </form>
                         </div>
@@ -65,7 +65,7 @@
                             <span class="flaticon-tour"></span>
                         </div>
                         <div class="services-cap">
-                           <h5><a href="login" : active="request()->routeIs('bfr.login')">Desain dan Kreatif</a></h5>
+                           <h5><a href="dashboard" : active="request()->routeIs('aftr.list_job')">Desain dan Kreatif</a></h5>
                             <span>(653)</span>
                         </div>
                     </div>
@@ -76,7 +76,7 @@
                             <span class="flaticon-cms"></span>
                         </div>
                         <div class="services-cap">
-                           <h5><a href="login" : active="request()->routeIs('bfr.login')">Desain & Development</a></h5>
+                           <h5><a href="dashboard" : active="request()->routeIs('aftr.list_job')">Desain & Development</a></h5>
                             <span>(658)</span>
                         </div>
                     </div>
@@ -87,7 +87,7 @@
                             <span class="flaticon-report"></span>
                         </div>
                         <div class="services-cap">
-                           <h5><a href="login" : active="request()->routeIs('bfr.login')">Sales & Marketing</a></h5>
+                           <h5><a href="dashboard" : active="request()->routeIs('aftr.list_job')">Sales & Marketing</a></h5>
                             <span>(658)</span>
                         </div>
                     </div>
@@ -98,7 +98,7 @@
                             <span class="flaticon-app"></span>
                         </div>
                         <div class="services-cap">
-                           <h5><a href="login" : active="request()->routeIs('bfr.login')">Mobile Application</a></h5>
+                           <h5><a href="dashboard" : active="request()->routeIs('aftr.list_job')">Mobile Application</a></h5>
                             <span>(658)</span>
                         </div>
                     </div>
@@ -109,7 +109,7 @@
                             <span class="flaticon-helmet"></span>
                         </div>
                         <div class="services-cap">
-                           <h5><a href="login" : active="request()->routeIs('bfr.login')">Konstruksi</a></h5>
+                           <h5><a href="dashboard" : active="request()->routeIs('aftr.list_job')">Konstruksi</a></h5>
                             <span>(658)</span>
                         </div>
                     </div>
@@ -120,7 +120,7 @@
                             <span class="flaticon-high-tech"></span>
                         </div>
                         <div class="services-cap">
-                           <h5><a href="login" : active="request()->routeIs('bfr.login')">Teknologi Informasi</a></h5>
+                           <h5><a href="dashboard" : active="request()->routeIs('aftr.list_job')">Teknologi Informasi</a></h5>
                             <span>(658)</span>
                         </div>
                     </div>
@@ -131,7 +131,7 @@
                             <span class="flaticon-real-estate"></span>
                         </div>
                         <div class="services-cap">
-                           <h5><a href="login" : active="request()->routeIs('bfr.login')">Properti</a></h5>
+                           <h5><a href="dashboard" : active="request()->routeIs('aftr.list_job')">Properti</a></h5>
                             <span>(658)</span>
                         </div>
                     </div>
@@ -142,7 +142,7 @@
                             <span class="flaticon-content"></span>
                         </div>
                         <div class="services-cap">
-                           <h5><a href="login" : active="request()->routeIs('bfr.login')">Penulis Konten</a></h5>
+                           <h5><a href="dashboard" : active="request()->routeIs('aftr.list_job')">Penulis Konten</a></h5>
                             <span>(658)</span>
                         </div>
                     </div>
@@ -153,7 +153,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="browse-btn2 text-center mt-50">
-                        <a href="login" : active="request()->routeIs('bfr.login')" class="border-btn2">Cari Semua Sektor</a>
+                        <a href="dashboard" : active="request()->routeIs('aftr.list_job')" class="border-btn2">Cari Semua Sektor</a>
                     </div>
                 </div>
             </div>
@@ -182,14 +182,14 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-tittle text-center">
-                        @auth
+                        {{-- @auth
                             <li style="size: 2rem">
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
                                     <button class="btn head-btn2" type="submit">Logout</button>
                                 </form>
                             </li>
-                        @endauth
+                        @endauth --}}
                     </div>
                 </div>
             </div>

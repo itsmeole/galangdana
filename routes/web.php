@@ -8,6 +8,9 @@ use App\Http\Controllers\LowonganController;
 Route::get('/', function () {
     return view('laman.utama');
 });
+Route::get('/dashboard', function () {
+    return view('aftr.list_job');
+});
 Route::get('/tentang', function () {
     return view('laman.tentang');
 });
